@@ -10,17 +10,17 @@ export type Project = {
 
 export type Skill = {
   title: string;
-  description: string;
+  category: string;
 }
 
-export type Experiences = {
+export type Experience = {
     title: string;
     description: string;
     timeframe: string;
     location: string;
 }
 
-export type Diplomas = {
+export type Diploma = {
     title: string;
     description: string
 }

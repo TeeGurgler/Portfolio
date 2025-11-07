@@ -13,7 +13,7 @@ class Project(BaseModel):
 
 class Skills(BaseModel):
     title: str
-    description: str
+    category: str
 
 class Experiences(BaseModel):
     title: str

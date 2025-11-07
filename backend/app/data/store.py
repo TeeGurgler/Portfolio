@@ -7,14 +7,14 @@ PROJECTS: list[Project] = [
         description="Dieses Projekt ist eine umfassende Python-Anwendung zur Erstellung und Visualisierung von Routen-Karten",
         imageUrl=HttpUrl("https://images.unsplash.com/photo-1580927752452-89d86da3fa0a"), # Example image
         url=HttpUrl("https://github.com/your-username/your-project-repo"),
-        tags=["python", "fastapi", "react", "docker"],
+        tags=["python"],
         featured=True,
     ),
     Project(
         id=2,
-        title="Demographische Datenanalyse",
+        title="Demografische Datenanalyse",
         description="Analyse der Schweizer Strukturerhebungsdaten mit einem Fokus auf Migrationsmuster.",
-        imageUrl="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb", # Example image
+        imageUrl=HttpUrl("https://images.unsplash.com/photo-1555949963-ff9fe0c870eb"), # Example image
         tags=["R"],
         featured=False,
     ),
@@ -22,63 +22,68 @@ PROJECTS: list[Project] = [
         id=3,
         title="Tennis Tracking",
         description="Video basierte Tennis-Analyse.",
-        imageUrl="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",  # Example image
-        tags=["Python"],
+        imageUrl=HttpUrl("https://images.unsplash.com/photo-1555949963-ff9fe0c870eb"),
+        tags=["Python", "ZED SDK"],
         featured=False
     )]
 
 SKILLS: list[Skills] = [
     Skills(
         title="Python",
-        description="x",
+        category="Sprachen",
     ),
     Skills(
         title="R",
-        description="x",
+        category="Sprachen",
     ),
     Skills(
         title="React",
-        description="x",
+        category="Frameworks & Libs.",
     ),
     Skills(
         title="Docker",
-        description="x",
+        category="Tools",
     ),
     Skills(
         title="FastAPI",
-        description="x",
+        category="Frameworks & Libs.",
     ),
     Skills(title="SQL",
-           description="x"),
+           category="Frameworks & Libs."),
 
-    Skills(title="Tailwind",description="x"),
+    Skills(title="Tailwind CSS",category="Frameworks & Libs."),
 
-    Skills(title="Git & Github",description="x")
+    Skills(title="Git & Github",category="Tools"),
+
+    Skills(title="ZED SDK",category="Frameworks & Libs."),
 ]
 EXPERIENCES: list[Experiences] = [
     Experiences(
         title="Primarschule",
         description="x",
-        timeframe="1234-4235",
-        location="x",
+        timeframe="2009-2015",
+        location="Dornach, CH",
     ),
     Experiences(
         title="Sekundarschule",
         description="x",
-        timeframe="1234-4235",
-        location="x"
+        timeframe="2015-2018",
+        location="Thurgau, CH"
     ),
     Experiences(
         title="Grundausbildung",
         description="x",
-        timeframe="1234-4235",
-        location="x"
+        timeframe="2020-2023",
+        location="Basel, CH"
     ),
+
+    Experiences(title="Parktikum", description="Anwaltsassistent", timeframe="2023-2024", location="Basel, CH"),
+
     Experiences(
         title="FHNW",
         description="Data-Science Studium",
-        location="Brugg",
-        timeframe="1234-4235"
+        location="Brugg, CH",
+        timeframe="2024-"
     )]
 
 DIPLOMAS: list[Diplomas] = [

@@ -10,8 +10,8 @@ services:
   web:
     build: ./frontend/portfolio
     container_name: portfolio_web
-    # This new command runs a fresh install every time, bypassing the cache bug.
-    command: sh -c "npm install && npm run dev"
+    # WICHTIGE ÄNDERUNG HIER: Wir fügen '-- --host' hinzu
+    command: sh -c "npm install && npm run dev -- --host"
     ports:
       - "5173:5173"
     volumes:

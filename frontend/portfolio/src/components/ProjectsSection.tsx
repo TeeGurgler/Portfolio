@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { api } from '../client';
+import { api } from '../api/client.ts';
 import type { Project } from '../types';
 
 export default function ProjectsSection() {

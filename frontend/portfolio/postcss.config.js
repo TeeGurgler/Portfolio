@@ -1,7 +1,6 @@
 export default {
   plugins: {
-    //tailwindcss: {}, trashy ass bug!!!
+    tailwindcss: {},
     autoprefixer: {},
-    '@tailwindcss/postcss': {},
-  }
+  },
 }
