@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from .Services.fetch_projects import *
 
 app = FastAPI()
 
@@ -11,3 +12,7 @@ async def root():
 @app.get("/hello/{name}")
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}
+
+@app.get("/all")
+async def projects():
+    return {f"message: {get_projects()}"}
