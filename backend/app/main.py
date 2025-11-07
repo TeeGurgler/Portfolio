@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from .Services.fetch_projects import *
+from .data.api import router as api_router
 
 app = FastAPI()
+
+# Include the API router which contains /api/projects and other endpoints
+app.include_router(api_router)
 
 
 @app.get("/")
