@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from .store import PROJECTS, SKILLS, EXPERIENCES, DIPLOMAS # Alle Datenlisten importieren
-from .models import Project, Skill, Experience, Diploma     # Alle Modelle importieren
+from .models import Project, Skills, Experiences, Diplomas     # Alle Modelle importieren
+
 
 # Dies erstellt den Router mit dem /api Präfix
 router = APIRouter(prefix="/api", tags=["api"])
@@ -16,24 +17,16 @@ async def list_projects():
     return PROJECTS
 
 # Endpunkt, um die Liste der Skills zurückzugeben
-@router.get("/skills", response_model=list[Skill])
+@router.get("/skills", response_model=list[Skills])
 async def list_skills():
     return SKILLS
 
 # Endpunkt, um die Liste der Erfahrungen zurückzugeben
-@router.get("/experience", response_model=list[Experience])
+@router.get("/experiences", response_model=list[Experiences])
 async def list_experience():
     return EXPERIENCES
 
 # Endpunkt, um die Liste der Diplome zurückzugeben
-@router.get("/diplomas", response_model=list[Diploma])
+@router.get("/diplomas", response_model=list[Diplomas])
 async def list_diplomas():
     return DIPLOMAS
-
-# Optional: Ein Endpunkt, um ein einzelnes Projekt anhand seiner ID abzurufen
-@router.get("/projects/{project_id}", response_model=Project)
-async def get_project(project_id: int):
-    for p in PROJECTS:
-        if p.id == project_id:
-            return p
-    raise HTTPException(status_code=404, detail="Project not found")

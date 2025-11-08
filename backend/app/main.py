@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 from .Services.fetch_projects import *
+from .data.api import router
 
 app = FastAPI()
 
-
+app.include_router(router)
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
@@ -12,7 +13,3 @@ async def root():
 @app.get("/hello/{name}")
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}
-
-@app.get("/all")
-async def projects():
-    return {f"message: {get_projects()}"}

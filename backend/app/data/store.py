@@ -6,15 +6,15 @@ PROJECTS: list[Project] = [
         title="Container Tracking",
         description="Dieses Projekt ist eine umfassende Python-Anwendung zur Erstellung und Visualisierung von Routen-Karten",
         imageUrl=HttpUrl("https://images.unsplash.com/photo-1580927752452-89d86da3fa0a"), # Example image
-        url=HttpUrl("https://github.com/your-username/your-project-repo"),
-        tags=["python"],
+        url=HttpUrl("https://github.com/NotSchebs/Cde1-1Da_Challenge_FHNW"),
+        tags=["Python"],
         featured=True,
     ),
     Project(
         id=2,
         title="Demografische Datenanalyse",
         description="Analyse der Schweizer Strukturerhebungsdaten mit einem Fokus auf Migrationsmuster.",
-        imageUrl=HttpUrl("https://images.unsplash.com/photo-1555949963-ff9fe0c870eb"), # Example image
+        url=HttpUrl("https://github.com/TeeGurgler/CDE1-Demografie"), # Example image
         tags=["R"],
         featured=False,
     ),
