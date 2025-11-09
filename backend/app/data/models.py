@@ -24,3 +24,4 @@ class Experiences(BaseModel):
 class Diplomas(BaseModel):
     title: str
     description: str
+    category: str

@@ -22,5 +22,6 @@ export type Experience = {
 
 export type Diploma = {
     title: string;
-    description: string
+    description: string;
+    category: string;
 }
