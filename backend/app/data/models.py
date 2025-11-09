@@ -14,6 +14,7 @@ class Project(BaseModel):
 class Skills(BaseModel):
     title: str
     category: str
+    icon_url: str
 
 class Experiences(BaseModel):
     title: str

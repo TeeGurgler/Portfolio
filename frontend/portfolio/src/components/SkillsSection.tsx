@@ -31,42 +31,48 @@ export default function SkillsSection() {
     <section id="skills" className="py-20 sm:py-28">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Tech Stack</h2>
+          <h2 className="text-3xl font-bold">Tech Stack</h2>
           <p className="mt-2 text-slate-600 dark:text-slate-400">Technologien, mit denen ich arbeite.</p>
         </div>
 
         {!skills && <div className="text-center">Lade Skills...</div>}
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {groupedSkills && Object.entries(groupedSkills).map(([category, categorySkills]) => (
             <div
               key={category}
-              className="relative rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group overflow-hidden"
+              className="relative group"
             >
-              {/* Gradient Background on Hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${categoryColors[category]} opacity-0 group-hover:opacity-5 dark:group-hover:opacity-10 transition-opacity duration-300`} />
+              {/* Gradient Border Effect */}
+              <div className={`absolute -inset-0.5 bg-gradient-to-r ${categoryColors[category]} rounded-2xl opacity-20 group-hover:opacity-40 blur transition duration-300`} />
 
-              {/* Header */}
-              <div className="relative flex items-center gap-3 mb-5">
-                <span className="text-3xl group-hover:scale-110 transition-transform duration-300">
-                  {categoryIcons[category]}
-                </span>
-                <h3 className={`text-lg font-bold bg-gradient-to-r ${categoryColors[category]} bg-clip-text text-transparent`}>
-                  {category}
-                </h3>
-              </div>
+              {/* Card Content */}
+              <div className="relative rounded-2xl bg-white dark:bg-slate-900 p-6 shadow-lg ring-1 ring-slate-200 dark:ring-slate-800">
+                {/* Header */}
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b-2 border-slate-100 dark:border-slate-800">
+                  <div className={`text-3xl p-2 rounded-lg bg-gradient-to-br ${categoryColors[category]} bg-opacity-10`}>
+                    {categoryIcons[category]}
+                  </div>
+                  <h3 className={`text-xl font-bold bg-gradient-to-r ${categoryColors[category]} bg-clip-text text-transparent`}>
+                    {category}
+                  </h3>
+                </div>
 
-              {/* Skills */}
-              <div className="relative flex flex-wrap gap-2">
-                {categorySkills.map((skill, idx) => (
-                  <span
-                    key={skill.title}
-                    style={{ animationDelay: `${idx * 30}ms` }}
-                    className="text-sm font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 px-3 py-2 rounded-lg hover:scale-110 hover:bg-slate-100 dark:hover:bg-slate-700 hover:shadow-md transition-all duration-200 cursor-default"
-                  >
-                    {skill.title}
-                  </span>
-                ))}
+                {/* Skills Grid */}
+                <div className="flex flex-wrap gap-2.5">
+                  {categorySkills.map((skill, idx) => (
+                    <span
+                      key={skill.title}
+                      style={{ animationDelay: `${idx * 30}ms` }}
+                      className="flex items-center gap-2 text-sm font-medium bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-800/50 text-slate-800 dark:text-slate-200 px-3.5 py-2.5 rounded-xl hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-default border border-slate-200/50 dark:border-slate-700/50"
+                    >
+                      {skill.icon_url && (
+                        <img src={skill.icon_url} alt="" className="w-5 h-5 drop-shadow-sm" />
+                      )}
+                      {skill.title}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

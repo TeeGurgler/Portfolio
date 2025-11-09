@@ -40,28 +40,28 @@ PROJECTS: list[Project] = [
 
 SKILLS: list[Skills] = [
     # Languages
-    Skills(title="Python", category="Sprachen"),
-    Skills(title="R", category="Sprachen"),
-    Skills(title="TypeScript", category="Sprachen"),
-    Skills(title="JavaScript", category="Sprachen"),
-    Skills(title="SQL", category="Sprachen"),
+    Skills(title="Python", category="Sprachen", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"),
+    Skills(title="R", category="Sprachen", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"),
+    Skills(title="TypeScript", category="Sprachen", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"),
+    Skills(title="JavaScript", category="Sprachen", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"),
+    Skills(title="SQL", category="Sprachen", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"),
 
     # Frameworks & Libraries
-    Skills(title="React", category="Frameworks & Libs."),
-    Skills(title="FastAPI", category="Frameworks & Libs."),
-    Skills(title="Tailwind CSS", category="Frameworks & Libs."),
-    Skills(title="Pandas", category="Frameworks & Libs."),
-    Skills(title="NumPy", category="Frameworks & Libs."),
-    Skills(title="Streamlit", category="Frameworks & Libs."),
-    Skills(title="ZED SDK", category="Frameworks & Libs."),
-    Skills(title="Pydantic", category="Frameworks & Libs."),
+    Skills(title="React", category="Frameworks & Libs.", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"),
+    Skills(title="FastAPI", category="Frameworks & Libs.", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"),
+    Skills(title="Tailwind CSS", category="Frameworks & Libs.", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"),
+    Skills(title="Pandas", category="Frameworks & Libs.", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"),
+    Skills(title="NumPy", category="Frameworks & Libs.", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"),
+    Skills(title="Streamlit", category="Frameworks & Libs.", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"),
+    Skills(title="ZED SDK", category="Frameworks & Libs.", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"),
+    Skills(title="Pydantic", category="Frameworks & Libs.", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"),
 
     # Tools
-    Skills(title="Docker & Docker Compose", category="Tools"),
-    Skills(title="Git & GitHub", category="Tools"),
-    Skills(title="Vite", category="Tools"),
-    Skills(title="pip-tools", category="Tools"),
-    Skills(title="Jupyter Notebooks", category="Tools"),
+    Skills(title="Docker", category="Tools", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"),
+    Skills(title="Git & GitHub", category="Tools", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"),
+    Skills(title="Vite", category="Tools", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg"),
+    Skills(title="pip-tools", category="Tools", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"),
+    Skills(title="Jupyter Notebooks", category="Tools", icon_url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"),
 ]
 
 EXPERIENCES: list[Experiences] = [

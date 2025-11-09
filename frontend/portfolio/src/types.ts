@@ -11,6 +11,7 @@ export type Project = {
 export type Skill = {
   title: string;
   category: string;
+  icon_url?: string;
 }
 
 export type Experience = {
