@@ -2,7 +2,7 @@
 
 A modern, full-stack portfolio web application built with FastAPI (Python) and React (TypeScript).
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 **Frontend:**
 - React 18 + TypeScript
@@ -19,7 +19,7 @@ A modern, full-stack portfolio web application built with FastAPI (Python) and R
 - Docker & Docker Compose
 - Hot-reload for development
 
-## 📦 Project Structure
+##  Project Structure
 
 ```
 Portfolio/
@@ -39,7 +39,7 @@ Portfolio/
 └── docker-compose.yml
 ```
 
-## 🏃 Quick Start
+## Quick Start
 
 **Prerequisites:** Docker & Docker Compose installed
 
@@ -59,15 +59,14 @@ Portfolio/
    - Backend API: http://localhost:8000
    - API docs: http://localhost:8000/docs
 
-## 📝 API Endpoints
+##  API Endpoints
 
 - `GET /api/projects` - List all projects
 - `GET /api/skills` - List all skills
 - `GET /api/experiences` - List all experiences
 - `GET /api/diplomas` - List all diplomas
-- `GET /api/health` - Health check
 
-## 🛠️ Development
+##  Development
 
 **Add new projects:** Edit `backend/app/data/store.py`
 
@@ -75,7 +74,7 @@ Portfolio/
 
 **Hot-reload enabled** for both frontend and backend.
 
-## 📄 License
+##  License
 
 MIT
 
