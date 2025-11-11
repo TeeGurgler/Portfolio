@@ -25,7 +25,7 @@ export default function ExperiencesSection() {
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-300 dark:bg-slate-600 motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md" />
 
           <div className="space-y-8 motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md">
-            {experiences?.map((exp, idx) => (
+            {experiences?.map((exp, _idx) => (
               <article key={exp.title} className="relative pl-20">
                 {/* Timeline dot */}
                 <div className="absolute left-6 top-6 w-5 h-5 rounded-full bg-blue-600 border-4 border-slate-100 dark:border-slate-800 motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md" />

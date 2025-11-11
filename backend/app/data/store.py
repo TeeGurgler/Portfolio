@@ -128,3 +128,24 @@ DIPLOMAS: list[Diplomas] = [
         category="Zertifikate"
     ),
 ]
+from .models import Project, Skills, Experiences, Diplomas, BlogPost
+from pydantic import HttpUrl
+
+# ... existing data ...
+
+BLOG_POSTS: list[BlogPost] = [
+    BlogPost(
+        id=1,
+        title="Reflektion - DPO",
+        content="""Für die gestellte Aufgabe habe ich mir verschiedene Stellenanzeigen angesehen und mich für die Position bei der bruederlinpartner-Gruppe entschieden.
+Mich hat diese Stelle besonders angesprochen, weil sie eine gute Mischung aus theoretischer Arbeit und praktischer Umsetzung bietet.
+ Laut der Beschreibung forscht man an neuen Methoden im Bereich des Maschinellen Lernens und entwickelt gleichzeitig konkrete Programme für Kunden. Das passt sehr gut zu den Inhalten aus dem Studium, wo wir gelernt haben. Wie man von einer Idee zu einem funktionierenden Modell kommt ist hier gross geschrieben, nehme ich an.
+Zudem gefällt mir, dass die Arbeit in internationalen Teams stattfindet und man an der gesamten Planung von Software mitwirken kann. Die geforderten Fähigkeiten, wie das Programmieren in Python oder der Umgang mit grossen Datenmengen sind genau die Dinge, die ich im Studium gelernt habe/lernen werde und nun gerne in der Praxis anwenden wollen würde.
+Das ausgeschriebene Tech-Stack entspricht meinen Vorstellungen und Interessen. 
+Die Stelle scheint daher eine sehr gute Möglichkeit zu sein, mein Wissen zu vertiefen.
+Zusätzlich finde ich es ein grosser Pluspunkt, dass es eine Schweizer mittelgrosse KMU ist.
+Ich persönlich weiss nicht mal wie ein Arbeitsverhältnis in IT, geschweige von Data Science, aussieht. Ich denke aber, dass dieser Job ein guter Startpunkt für meine Karriere sein kann.""",
+        date="2025-01-11",
+        url=HttpUrl("https://www.data-science-jobs.ch/job/891902/data-scientist-mwd?search=data%2520scientist")
+    ),
+]

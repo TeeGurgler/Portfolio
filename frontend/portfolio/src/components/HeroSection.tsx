@@ -1,4 +1,3 @@
-import React from 'react';
 import photoUrl from "../assets/photo.jpg"
 
 export default function HeroSection() {
@@ -6,7 +5,7 @@ export default function HeroSection() {
   //const photoUrl = '../assets/photo.jpg';
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center py-15 px-4">
+    <section id="home" className="min-h-screen flex items-center justify-center py-10 px-4">
       <div className="max-w-3xl text-center">
         <span className="text-blue-500 font-semibold">Data Scientist</span>
 
