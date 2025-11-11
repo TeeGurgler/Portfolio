@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { api } from '../api/client';
 import type { Skill } from '../types';
+import { CodeBracketIcon, CubeIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 
-const categoryIcons: Record<string, string> = {
-  'Sprachen': '⌨️',
-  'Frameworks & Libs.': '⚙️',
-  'Tools': '🔧',
+const categoryIcons: Record<string, React.ReactNode> = {
+  'Sprachen': <CodeBracketIcon className="w-7 h-7" />,
+  'Frameworks & Libs.': <CubeIcon className="w-7 h-7" />,
+  'Tools': <WrenchScrewdriverIcon className="w-7 h-7" />,
 };
 
 const categoryColors: Record<string, string> = {
@@ -31,7 +32,7 @@ export default function SkillsSection() {
     <section id="skills" className="py-20 sm:py-28">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold">Tech Stack</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Tech Stack</h2>
           <p className="mt-2 text-slate-600 dark:text-slate-400">Technologien, mit denen ich arbeite.</p>
         </div>
 
@@ -43,14 +44,12 @@ export default function SkillsSection() {
               key={category}
               className="relative group"
             >
-              {/* Gradient Border Effect */}
-              <div className={`absolute -inset-0.5 bg-gradient-to-r ${categoryColors[category]} rounded-2xl opacity-20 group-hover:opacity-40 blur transition duration-300`} />
 
               {/* Card Content */}
               <div className="relative rounded-2xl bg-white dark:bg-slate-900 p-6 shadow-lg ring-1 ring-slate-200 dark:ring-slate-800">
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b-2 border-slate-100 dark:border-slate-800">
-                  <div className={`text-3xl p-2 rounded-lg bg-gradient-to-br ${categoryColors[category]} bg-opacity-10`}>
+                <div className={`p-2 rounded-lg bg-gradient-to-br ${categoryColors[category]} bg-opacity-10`}>
                     {categoryIcons[category]}
                   </div>
                   <h3 className={`text-xl font-bold bg-gradient-to-r ${categoryColors[category]} bg-clip-text text-transparent`}>

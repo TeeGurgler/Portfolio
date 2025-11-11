@@ -16,8 +16,8 @@ export default function CustomCursor() {
     <div
       className="fixed pointer-events-none z-0 rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-3xl"
       style={{
-        width: '800px',
-        height: '800px',
+        width: '1800px',
+        height: '1800px',
         left: position.x,
         top: position.y,
         transform: 'translate(-50%, -50%)',

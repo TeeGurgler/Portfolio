@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { api } from '../api/client.ts';
 import type { Experience } from '../types';
+import { MapPinIcon } from '@heroicons/react/24/outline';
 
 export default function ExperiencesSection() {
   const [experiences, setExperiences] = useState<Experience[] | null>(null);
@@ -13,7 +14,7 @@ export default function ExperiencesSection() {
     <section id="experiences" className="py-20 sm:py-28 bg-slate-100 dark:bg-slate-800">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold">Lebenslauf</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-red-600 bg-clip-text text-transparent">Lebenslauf</h2>
           <p className="mt-2 text-slate-600 dark:text-slate-400">Mein beruflicher Werdegang.</p>
         </div>
 
@@ -23,7 +24,7 @@ export default function ExperiencesSection() {
           {/* Timeline line */}
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-300 dark:bg-slate-600 motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md" />
 
-          <div className="space-y-8 otion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md">
+          <div className="space-y-8 motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md">
             {experiences?.map((exp, idx) => (
               <article key={exp.title} className="relative pl-20">
                 {/* Timeline dot */}
@@ -37,7 +38,10 @@ export default function ExperiencesSection() {
                       {exp.timeframe}
                     </span>
                   </div>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">📍 {exp.location}</p>
+                  <div className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 mb-3">
+                    <MapPinIcon className="w-4 h-4" />
+                    <span>{exp.location}</span>
+                  </div>
                   <p className="text-slate-600 dark:text-slate-300">{exp.description}</p>
                 </div>
               </article>
